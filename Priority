@@ -1,0 +1,41 @@
+/**
+ * Jaszmin Delt-Makey
+ * 1-22-18
+ * Driver for class Task
+ */
+
+public class TaskDriver
+{
+    public static void main (String args[])
+    {
+        Task task1 = new Task("Video Games");
+        task1.setPriority(1);
+        Task task2 = new Task("Sleep");
+        task2.setPriority(2);
+        Task task3 = new Task("School");
+        task3.setPriority(3);
+        
+        System.out.println("Task Names: " + task2.getTaskName() + ", " + task1.getTaskName() +
+        ", " + task3.getTaskName());
+        
+        if(task3.compareTo(task1) == 1 && task3.compareTo(task2) == 1)
+        {
+            System.out.println(task3.getTaskName());
+            if (task2.compareTo(task1) == 1 && task2.compareTo(task3) == -1)
+                System.out.println(task2.getTaskName());
+                if (task1.compareTo(task2) == -1 && task1.compareTo(task3) == -1)
+                    System.out.println(task1.getTaskName());
+        
+        }
+        //System.out.println(task1.compareTo(task2));
+        //System.out.println(task2.compareTo(task3));
+        
+        
+        //System.out.println(task3.getTaskName() + "\n" + task3.toString() + "\n");
+        //System.out.println(task2.getTaskName() + "\n" + task2.toString() + "\n");
+        //System.out.println(task1.getTaskName() + "\n" + task1.toString());
+        
+        
+    }// end main method
+}// end class TaskDriver
+    
